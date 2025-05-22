@@ -1,0 +1,154 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 0 2rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.footer-logo h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.footer-logo p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.footer-links h3::after,
+.footer-contact h3::after,
+.footer-social h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.footer-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-links li span {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-links li span:hover {
+  color: #ccc;
+}
+
+.footer-contact {
+  text-align: center; /* Center text horizontally */
+}
+
+.footer-contact p {
+  margin-bottom: 1rem;
+  display: inline-flex; /* Display items in a line */
+  align-items: center;
+  justify-content: center; /* Center items horizontally */
+  gap: 0.5rem;
+  text-align: center; /* Center text horizontally */
+}
+
+.footer-contact i {
+  font-size: 1rem;
+  /*display: block;  Make icon take full width */
+  margin: 0; /* Remove auto margins */
+  text-align: center; /* Center icon horizontally */
+}
+
+.footer-contact-details {
+  display: inline;
+  text-align: center;
+}
+
+.footer-social {
+  text-align: center; /* Center content horizontally */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center; /* Center icons horizontally */
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #007bff;
+}
+
+.social-icons i {
+  font-size: 1.2rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.footer-bottom span {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom span:hover {
+  color: #ccc;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}

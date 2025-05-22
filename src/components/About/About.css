@@ -1,0 +1,111 @@
+.about {
+  background-color: #090a09; /* darker background for more premium look */
+  padding: 4rem 0; /* more breathing room */
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* stronger shadow for pop */
+}
+
+.about-text {
+  flex: 2;
+  text-align: left;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.about-text p {
+  margin-bottom: 1.8rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #ccc; /* softer light gray text */
+}
+
+/* Button tweaks for better vibe */
+.about-text .btn {
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.about-text .btn:hover {
+  background-color: #007bff;
+  transform: translateY(-2px);
+}
+
+.inline-logo {
+  width: 20px; /* Small width */
+  height: 20px; /* Small height */
+  object-fit: contain; /* Keep the image ratio */
+  margin: 0 6px;
+  vertical-align: middle; /* Align nicely with text */
+}
+.evo-logo {
+  width: 50px; /* Make it a bit wider */
+  height: auto; /* Keep aspect ratio natural */
+  object-fit: contain;
+  vertical-align: middle;
+  margin: 0 6px;
+}
+
+.logo-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; /* Distribute logos evenly */
+  flex-wrap: wrap; /* Allow logos to wrap on smaller screens */
+  text-align: center; /* Center logos horizontally */
+  margin-top: 20px; /* Add margin above the logo line */
+}
+
+.logo-item {
+  height: 80px; /* Increased logo height even more */
+  width: auto;
+  object-fit: contain;
+  padding: 0.5rem; /* Add padding around the logo */
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    height: 50px; /* Smaller logo height on mobile */
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-image {
+    width: 100%;
+  }
+
+  .about-image img {
+    max-width: 300px;
+  }
+}

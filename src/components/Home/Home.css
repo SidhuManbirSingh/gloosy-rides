@@ -1,0 +1,72 @@
+.home {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-color: black; 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden; /* Ensure the overlay covers the entire section */
+  /* background-image will be set dynamically via inline styles */
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust the opacity for dimming */
+  z-index: 1;
+}
+
+.home-overlay {
+  position: relative;
+  z-index: 2; /* Ensure content is above the dimming overlay */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home-content {
+  max-width: 800px;
+  padding: 0 2rem;
+  color: #fff;
+}
+
+.home-title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.home-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 1s ease-in-out 0.3s forwards;
+  opacity: 0;
+}
+
+.home-content .btn {
+  animation: fadeIn 1s ease-in-out 0.6s forwards;
+  opacity: 0;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2.5rem;
+  }
+  
+  .home-subtitle {
+    font-size: 1.2rem;
+  }
+}

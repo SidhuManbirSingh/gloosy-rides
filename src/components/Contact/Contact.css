@@ -1,0 +1,230 @@
+.contact {
+  background-color: #010203;
+  padding: 4rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #fff;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #007bff;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 200px); /* Account for padding and header */
+  align-items: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  height: 100%;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-detail div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-detail:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-detail i {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-top: 0.5rem;
+}
+
+.contact-detail h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.contact-detail p {
+  margin-bottom: 0.5rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.contact-map {
+	margin-top: 2rem;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+	width: 70%;
+	margin: auto;
+	padding: 2rem;
+	height: 21rem;
+}
+
+.contact-form-container {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: baseline;
+}
+
+.contact-form-container h3 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #fff;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.contact-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-success {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 8px;
+  text-align: center;
+  animation: slideIn 0.3s ease;
+}
+
+.form-error {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f8d7da;
+  color: #721c24;
+  border-radius: 8px;
+  text-align: center;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 0 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .contact-form-container {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact {
+    padding: 2rem 0;
+  }
+
+  .contact-detail {
+    padding: 1rem;
+  }
+
+  .contact-detail i {
+    font-size: 1.5rem;
+  }
+
+  .contact-form-container h3 {
+    font-size: 1.5rem;
+  }
+}

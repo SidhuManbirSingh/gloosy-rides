@@ -1,0 +1,55 @@
+.services {
+  background-color: #010203;
+  color: #fff;
+}
+
+.service-card {
+  text-align: center;
+  transition: transform 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.service-details {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  text-align: left;
+  animation: fadeIn 0.5s ease-in-out;
+  color: #fff;
+}
+
+.service-details p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Animation for service details */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-details {
+  animation: slideDown 0.3s ease-in-out;
+}
+
+.card-title {
+  color: #fff;
+}
+
+.card-text {
+  color: #ccc;
+}
