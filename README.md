@@ -1,4 +1,4 @@
-# Glossy Rides 
+# Glossy Rides Frontend
 
 This is the frontend for the Glossy Rides car detailing website. It's a single-page application (SPA) built with React.
 
